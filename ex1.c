@@ -51,11 +51,13 @@ int main() {
 
     printf("\n\nOk, seus valores sao %d como valor inicial e %d para valor final.", iInicio, iFim);
 
-    for (iCount = iInicio; iCount <= iFim; iCount++) {
-      if (iCount % 2 == 0) {
-        iResultado += iCount;
+    do {
+      if (iInicio % 2 == 0) {
+        iResultado += iInicio;
       }
-    }
+
+      iInicio++;
+    } while (iInicio <= iFim);
 
     printf("\n\nE a soma dos pares entre esses valores e: %d", iResultado);
     printf("\n\nDigite 1 para rodar o programa novamente ou 0 para sair:\n");
